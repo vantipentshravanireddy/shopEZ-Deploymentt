@@ -1,0 +1,160 @@
+﻿.orders-container {
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+.orders-title {
+  text-align: left;
+  margin-bottom: 30px;
+  font-size: 42px;
+  color: #f4f7fb;
+}
+
+.orders-loading,
+.orders-empty {
+  color: #cbd5e1;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.orders-list {
+  display: grid;
+  gap: 24px;
+}
+
+.order-card {
+  background: #111827;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+.order-card-main {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  padding: 24px;
+}
+
+.order-card-thumb {
+  flex-shrink: 0;
+  width: 190px;
+  height: 220px;
+  border-radius: 22px;
+  overflow: hidden;
+  background: #0f172a;
+}
+
+.order-card-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.order-card-info {
+  flex: 1;
+}
+
+.order-card-info h2 {
+  margin: 0 0 12px;
+  font-size: 1.6rem;
+  color: #ffffff;
+}
+
+.order-description {
+  margin: 0 0 18px;
+  color: #cbd5e1;
+  line-height: 1.75;
+}
+
+.order-meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 12px;
+  color: #d1d5db;
+}
+
+.order-meta-row span {
+  min-width: 170px;
+}
+
+.order-user-row {
+  margin-top: 6px;
+}
+
+.order-status {
+  margin: 18px 0;
+  font-size: 0.96rem;
+  color: #f8fafc;
+}
+.order-product-title {
+  margin: 14px 0 8px;
+  color: #e2e8f0;
+  font-weight: 700;
+}
+
+.order-product-list {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.order-product-item {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 12px;
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.05);
+  color: #d1d5db;
+}
+
+.order-product-item span {
+  display: block;
+}
+.order-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+.order-actions select {
+  padding: 12px 14px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(15, 23, 42, 0.95);
+  color: #f8fafc;
+}
+
+.order-btn {
+  padding: 12px 18px;
+  border-radius: 14px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.update-btn {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.cancel-btn {
+  background: #dc2626;
+  color: #ffffff;
+}
+
+@media (max-width: 920px) {
+  .order-card-main {
+    flex-direction: column;
+  }
+
+  .order-card-thumb {
+    width: 100%;
+    height: 240px;
+  }
+}

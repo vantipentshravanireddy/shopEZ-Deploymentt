@@ -1,0 +1,79 @@
+import Navbar from "./components/Navbar";
+import { Routes, Route } from "react-router-dom";
+
+import Cart from "./pages/Cart";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
+import Orders from "./pages/Orders";
+import Admin from "./pages/Admin";
+import AllProducts from "./pages/AllProducts";
+import Profile from "./pages/Profile";
+import Home from "./pages/Home";
+import ProtectedRoute from "./components/ProtectedRoute";
+import AddProduct from "./pages/AddProduct";
+function App() {
+  return (
+    <>
+      <Navbar />
+
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <ProtectedRoute>
+              <Home />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/cart"
+          element={
+            <ProtectedRoute>
+              <Cart />
+            </ProtectedRoute>
+          }
+        />
+
+        <Route path="/login" element={<Login />} />
+
+        <Route path="/register" element={<Register />} />
+
+        <Route
+          path="/orders"
+          element={
+            <ProtectedRoute>
+              <Orders />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/admin"
+          element={
+            <ProtectedRoute adminOnly>
+              <Admin />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/all-products"
+          element={
+            <ProtectedRoute adminOnly>
+              <AllProducts />
+            </ProtectedRoute>
+          }
+        />
+        <Route path="/add-product" element={<AddProduct />} />
+        <Route
+          path="/profile"
+          element={
+            <ProtectedRoute>
+              <Profile />
+            </ProtectedRoute>
+          }
+        />
+      </Routes>
+    </>
+  );
+}
+
+export default App;
